@@ -1,0 +1,43 @@
+@tailwind components;
+@tailwind utilities;
+@tailwind base;
+
+@layer utilities {
+    .cell { @apply relative overflow-hidden flex flex-col justify-between items-center w-full h-full rounded-lg shadow-md p-3; }
+}
+
+.grid-rows-7{ grid-template-rows: repeat(7, minmax(0, 1fr)); }
+.grid-rows-8{ grid-template-rows: repeat(8, minmax(0, 1fr)); }
+.grid-rows-9{ grid-template-rows: repeat(9, minmax(0, 1fr)); }
+.grid-rows-10{ grid-template-rows: repeat(10, minmax(0, 1fr)); }
+.grid-rows-11{ grid-template-rows: repeat(11, minmax(0, 1fr)); }
+.grid-rows-12{ grid-template-rows: repeat(12, minmax(0, 1fr)); }
+.grid-rows-13{ grid-template-rows: repeat(13, minmax(0, 1fr)); }
+.grid-rows-14{ grid-template-rows: repeat(14, minmax(0, 1fr)); }
+.grid-rows-15{ grid-template-rows: repeat(15, minmax(0, 1fr)); }
+.grid-rows-16{ grid-template-rows: repeat(16, minmax(0, 1fr)); }
+
+body, html {
+    overflow: none;
+}
+    
+*::-webkit-scrollbar {
+    width: 10px;
+    height: 20px;
+}
+
+*::-webkit-scrollbar-track {
+    border-radius: 100vh;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: transparent;
+    /* background: rgba(122, 123, 124, 0.493); */
+    border-radius: 100vh;
+    border: 3px solid transparent;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+    /* background: rgba(102, 103, 104, 0.61); */
+}
