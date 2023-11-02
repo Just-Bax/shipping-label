@@ -1,3 +1,3 @@
 module.exports = {
-    publicPath: '/product-label/'
+    publicPath: '/shipping-label/'
   }

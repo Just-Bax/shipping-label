@@ -19,7 +19,7 @@
   }
 
   const collect_data = async () => {
-    data.value = await get_data(domain, token, 'ITEM', 'G:Product label', key_value);
+    data.value = await get_data(domain, token, 'ITEM', 'G:Shipping label', key_value);
     is_load.value = true;
   };
 
@@ -38,9 +38,9 @@
     "MASTERPARTLIST.MPL_UOM": string | null;
     "MASTERPARTLIST.TRACKOR_CLASS_ID": string | null;
     "MASTERPARTLIST.IPR_SIZE_TYPE": string | null;
-    "PO_Line.POL_UNIT_PRICE": string | null;
-    "PO_Line.TRACKOR_KEY": string | null;
-    "PO_Line.POL_COST_CATEGORY": string | null;
+    "Candidate.C_CANDIDATE_NAME": string | null;
+    "Candidate.C_ADDRESS": string | null;
+    "DO_LINE.DOL_DLVR_DATE": string | null;
     "ITM_QR_CODE": { data: string | null; file_name: string | null; };
     "ITM_BARCODE": { data: string | null; file_name: string | null; };
   }
@@ -81,9 +81,9 @@
           <div><span class="font-semibold mr-2">Unit of measure:</span><span class="font-normal">{{ data?.['MASTERPARTLIST.MPL_UOM'] }}</span></div>
           <div><span class="font-semibold mr-2">Size:</span><span class="font-normal">{{ data?.['MASTERPARTLIST.IPR_SIZE_TYPE'] }}</span></div>
           <div><span class="font-semibold mr-2">Serial number:</span><span class="font-normal">{{ data?.['ITM_SERIAL_NUMBER'] }}</span></div>
-          <div><span class="font-semibold mr-2">Purchase order line number:</span><span class="font-normal">#{{ data?.['PO_Line.TRACKOR_KEY'] }}</span></div>
-          <div><span class="font-semibold mr-2">Unit price:</span><span class="font-normal">${{ data?.['PO_Line.POL_UNIT_PRICE'] }}</span></div>
-          <div><span class="font-semibold mr-2">Cost category:</span><span class="font-normal">{{ data?.['PO_Line.POL_COST_CATEGORY'] }}</span></div>
+          <div><span class="font-semibold mr-2">Site name:</span><span class="font-normal">{{ data?.['Candidate.C_CANDIDATE_NAME'] }}</span></div>
+          <div><span class="font-semibold mr-2">Address:</span><span class="font-normal">{{ data?.['Candidate.C_ADDRESS'] }}</span></div>
+          <div><span class="font-semibold mr-2">Delivery date:</span><span class="font-normal">{{ data?.['DO_LINE.DOL_DLVR_DATE'] }}</span></div>
         </div>
         <div v-else class="w-full flex justify-center items-center">
           <span class="font-semibold text-[#607D8B]">Loading..</span>
